@@ -1,73 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="shortcut icon" href="images/HM-favicon-png.png" type="image/x-icon">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <p><a href="#" class="logo">Hamdi M.</a> Portfolio</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li class="current"><a href="contact.html">Contact</a></li>
-                    <li><a id="hire-me-btn-1" href="contact.html">Hire Me</a></li>
-                </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+        <script src="https://kit.fontawesome.com/fe3d3f96be.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="assets/images/HM-favicon-png.png" type="image/x-icon" />
+    </head>
+    <body>
+        <header class="has-background-success">
+            <nav
+                class="navbar has-shadow has-background-primary-dark"
+                role="navigation"
+                aria-label="main navigation"
+            >
+                <div class="navbar-brand">
+                    <a
+                        class="navbar-item is-italic is-size-5 has-text-primary-light"
+                        href="home.html"
+                        >Hamdi M. Portfolio</a
+                    >
+                    <a
+                        role="button"
+                        class="navbar-burger has-background-success"
+                        id="burger"
+                        aria-label="menu"
+                        aria-expanded="false"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="navbar-menu" id="nav-links">
+                    <div class="navbar-end has-background-primary-dark">
+                        <a class="navbar-item has-text-primary-light" href="home.html">Home</a>
+                        <a class="navbar-item has-text-primary-light" href="about.html">About</a>
+                        <a class="navbar-item has-text-primary-light" href="services.html"
+                            >Services</a
+                        >
+                        <a class="navbar-item has-text-primary-light" href="pricing.html"
+                            >Pricing</a
+                        >
+                        <a class="navbar-item has-text-warning" href="contact.html">Contact</a>
+                        <a
+                            class="navbar-item has-background-primary has-text-warning"
+                            href="contact.html"
+                            >Hire Me
+                        </a>
+                    </div>
+                </div>
             </nav>
-        </div>
-    </header>
-    <main>
-        <section class="contact-title-cover">
-            <h1>Contact</h1>
-        </section>
-        <section class="contact-form">
-            <h1>Want To Get In Touch?</h1>
-            <form>
-                <input type="text" placeholder="Full Name" autocapitalize="words" autofocus required>
-                <input type="email" placeholder="Email Address" required>
-                <div class="phone-num-box">
-                    <select name="country-code" id="country-code">
-                        <option value="ethiopia">+251</option>
-                        <option value="somalia">+252</option>
-                        <option value="djibouti">+253</option>
-                        <option value="eritrea">+291</option>
-                    </select>
-                    <input type="tel" maxlength="9" required>
+        </header>
+        <main>
+            <section class="section has-background-warning-light">
+                <h1 class="is-size-2 has-text-centered">Contact</h1>
+            </section>
+            <section class="section pt-3 has-background-info-light">
+                <h1 class="is-size-3 has-text-centered my-3">Want To Get In Touch</h1>
+                <form class="">
+                    <div class="control has-icons-left my-2">
+                        <input
+                            class="input is-primary has-background-primary-light"
+                            type="text"
+                            placeholder="Full Name"
+                        />
+                        <span class="icon is-small is-left">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </div>
+                    <div class="control has-icons-left my-2">
+                        <input
+                            class="input is-primary has-background-primary-light"
+                            type="email"
+                            placeholder="Email Address"
+                        />
+                        <span class="icon is-small is-left">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    </div>
+
+                    <div class="select my-1 is-primary">
+                        <select
+                            class="has-background-primary-light"
+                            name="country-code"
+                            id="country-code"
+                        >
+                            <option value="ethiopia">+251</option>
+                            <option value="somalia">+252</option>
+                            <option value="djibouti">+253</option>
+                            <option value="eritrea">+291</option>
+                        </select>
+                    </div>
+                    <div class="control has-icons-left is-inline">
+                        <input
+                            class="input is-inline my-1 is-primary has-background-primary-light"
+                            type="tel"
+                            maxlength="9"
+                            required
+                            placeholder="Phone Number"
+                        />
+                        <span class="icon is-small is-left">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                    </div>
+
+                    <textarea
+                        class="textarea my-1 is-primary has-background-primary-light"
+                        name="Message"
+                        cols="40"
+                        rows="10"
+                        placeholder="Message (optional)"
+                    ></textarea>
+                    <div class="has-text-centered">
+                        <input class="button my is-primary is-medium my-3" type="submit" />
+                    </div>
+                </form>
+            </section>
+            <div class="section has-text-centered">
+                <iframe
+                    class="google-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15760.946521333412!2d38.75165916423008!3d9.042166740914768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f642ba9e021%3A0x2321687a606863f3!2sAddis%20Ababa%20Institute%20of%20Technology!5e0!3m2!1sen!2set!4v1700896297800!5m2!1sen!2set"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </main>
+        <footer class="footer p-1 has-background-primary-light">
+            <p class="has-text-centered"><a href="home.html">Hamdi M.</a></p>
+            <address class="columns my-3 is-justify-content-space-evenly" id="connect-directly">
+                <div class="column is-full-mobile is-one-third-desktop has-text-centered">
+                    <p class="is-inline">
+                        <img
+                            class="image is-16x16 is-inline"
+                            src="assets/images/svg/phone-solid.svg"
+                            alt="Phone"
+                        />
+                        <a href="#">+251 912 345 678</a>
+                    </p>
                 </div>
-                <textarea name="Message" cols="40" rows="10" placeholder="Message (optional)"></textarea>
-                <input type="submit">
-            </form>
-        </section>
-        <div class="location-on-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15760.946521333412!2d38.75165916423008!3d9.042166740914768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f642ba9e021%3A0x2321687a606863f3!2sAddis%20Ababa%20Institute%20of%20Technology!5e0!3m2!1sen!2set!4v1700896297800!5m2!1sen!2set" width="600" height="450" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </main>
-    <footer>
-        <div class="contact">
-            <p class="logo">Hamdi M.</p>
-            <address>
-                <p><img src="images/svg/phone-solid.svg" alt="Phone"> <a href="#">+251 912 345 678</a></p>
-                <p><img src="images/svg/envelope-solid.svg" alt="Email"> <a href="mailto:hm456123@gmail.com">hm456123@gmail.com</a></p>
-                <p><img src="images/svg/location-dot-solid.svg" alt="Location"> <a href="https://maps.app.goo.gl/XnbEU1CXgs9zGk3y7">5kilo AAiT, Addis Ababa</a></p>
+                <div class="column is-full-mobile is-one-third-desktop has-text-centered">
+                    <p class="is-inline">
+                        <img
+                            class="image is-16x16 is-inline"
+                            src="assets/images/svg/envelope-solid.svg"
+                            alt="Email"
+                        />
+                        <a href="mailto:hm456123@gmail.com">hm456123@gmail.com</a>
+                    </p>
+                </div>
+                <div class="column is-full-mobile is-one-third-desktop has-text-centered">
+                    <p class="is-inline">
+                        <img
+                            class="image is-16x16 is-inline"
+                            src="assets/images/svg/location-dot-solid.svg"
+                            alt="Location"
+                        />
+                        <a href="https://maps.app.goo.gl/XnbEU1CXgs9zGk3y7"
+                            >5kilo AAiT, Addis Ababa</a
+                        >
+                    </p>
+                </div>
             </address>
-            <div class="copyright-container">
-                <p>&copy; 2023 <a href="home.html"><span class="logo">Hamdi M.</span>™</a> | All Rights Reserved</p>
-                <div class="social-links">
-                    <a href="https://github.com/hmyunis"><img src="images/svg/github.svg" alt="Github"></a>
-                    <a href="https://www.linkedin.com/in/hamdi-mohammed-454531202/"><img src="images/svg/linkedin.svg" alt="LinkedIn"></a>
-                    <a href="https://t.me/Hamdi00"><img src="images/svg/telegram.svg" alt="Telegram"></a>
-                    <a href="#"><span id="scroll-to-top">Scroll to Top 🔼</span></a>
+            <div class="columns is-justify-content-space-between">
+                <p class="column is-6-mobile is-4-desktop is-size-7-mobile">
+                    &copy; 2023 <a href="home.html"><span class="logo">Hamdi M.</span>™</a> | All
+                    Rights Reserved
+                </p>
+                <div class="column is-4-mobile is-2-desktop">
+                    <a class="m-1" href="https://github.com/hmyunis"
+                        ><img
+                            class="image is-16x16 is-inline"
+                            src="assets/images/svg/github.svg"
+                            alt="Github"
+                    /></a>
+                    <a class="m-1" href="https://www.linkedin.com/in/hamdi-mohammed-454531202/"
+                        ><img
+                            class="image is-16x16 is-inline"
+                            src="assets/images/svg/linkedin.svg"
+                            alt="LinkedIn"
+                    /></a>
+                    <a class="m-1" href="https://t.me/Hamdi00"
+                        ><img
+                            class="image is-16x16 is-inline"
+                            src="assets/images/svg/telegram.svg"
+                            alt="Telegram"
+                    /></a>
+                    <a
+                        class="m-1"
+                        class="button is-small is-rounded is-outlined is-primary"
+                        href="#"
+                        >🔼</a
+                    >
                 </div>
             </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>
